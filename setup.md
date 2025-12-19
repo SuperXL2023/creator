@@ -24,8 +24,13 @@
                 </ul></li>
             <li>github secrets (setup on your github account for your rdgen repo):  
                 <oul>
-                <li>GENURL="example.com:8000"  </li>
-                *this is the domain and port that your are running rdgen on, needs to be accesible on the internet, depending on how you have this setup the port may not be needed
+                    <ul>
+            Next, login to your Github account, go to your rdgen repo page (https://github.com/USERNAME/rdgen)<br>
+Click on Settings<br>
+In the left pane, click on Secrets and variables, then click Actions<br>
+Now click New repository secret<br>
+Set the Name to GENURL<br>
+Set the Secret to https://rdgen.hostname.com (or whatever your server will be accessed from)<br>
                 </ul></li>
             <li>optional github secrets (for signing the code):  
                 <ul>
