@@ -288,9 +288,7 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/allowCustom3.diff -OutFile allowCustom3.diff
           git apply allowCustom3.diff
-
           # Remove Setup Server Tip			
-					
           Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/removeSetupServerTip2.diff -OutFile removeSetupServerTip2.diff
           git apply removeSetupServerTip2.diff
 
