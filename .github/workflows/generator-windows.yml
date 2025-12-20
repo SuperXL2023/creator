@@ -284,14 +284,14 @@ jobs:
           #sed -i '/intl:/a \ \ archive: ^3.6.1' ./flutter/pubspec.yaml
 
       - name: allow custom.txt
-        continue-on-error: true
+        continue-on-error: false
         run: |
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/allowCustom2.diff -OutFile allowCustom.diff
-          git apply allowCustom.diff
+          # Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/allowCustom2.diff -OutFile allowCustom.diff
+          # git apply allowCustom.diff
           # git apply allowCustom.py ### modyfed ###
           # Remove Setup Server Tip
-          # Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/removeSetupServerTip2.diff -OutFile removeSetupServerTip.diff
-          # git apply removeSetupServerTip.diff
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/removeSetupServerTip2.diff -OutFile removeSetupServerTip.diff
+          git apply removeSetupServerTip.diff
 
 
       - name: Install LLVM and Clang
