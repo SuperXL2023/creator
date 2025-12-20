@@ -286,14 +286,14 @@ jobs:
       - name: allow custom.txt
         continue-on-error: false
         run: |
-          Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/allowCustom3.diff -OutFile allowCustom3.diff
-          git apply allowCustom3.diff
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/allowCustom4.diff -OutFile allowCustom4.diff
+          git apply allowCustom4.diff
           
       - name: allow Remove Setup Server Tip
         continue-on-error: false
         run: |
-          # Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/removeSetupServerTip3.diff -OutFile removeSetupServerTip3.diff
-          # git apply removeSetupServerTip3.diff
+          Invoke-WebRequest -Uri https://raw.githubusercontent.com/SuperXL2023/creator/refs/heads/master/.github/patches/removeSetupServerTip3.diff -OutFile removeSetupServerTip3.diff
+          git apply removeSetupServerTip3.diff
 
       - name: Install LLVM and Clang
         uses: KyleMayes/install-llvm-action@v1
